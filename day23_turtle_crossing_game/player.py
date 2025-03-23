@@ -11,6 +11,8 @@ class Player(Turtle):
         self.y_move = 10
 
     def move(self):
-        print("move..")
         new_y = self.ycor() + self.y_move
         self.goto(self.xcor(), new_y)
+
+    def reset_pos(self):
+        self.goto(self.xcor(), -280)

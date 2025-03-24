@@ -3,6 +3,7 @@ from turtle import Turtle, Screen
 from player import Player
 from car import Car
 from scoreboard import ScoreBoard
+from car_manager import CarManager
 
 screen = Screen()
 screen.setup(600,600)
@@ -10,41 +11,40 @@ screen.bgcolor("white")
 screen.title("turtle crossing game")
 screen.tracer(0)
 
-
-
 player = Player()
+car_manager = CarManager()
 
 screen.listen()
 screen.onkey(player.move, "Up")
-# car = Car()
 
 carlist = []
-for i in range(0, 10):
+for i in range(0, 0):
     print("i:", i)
     carlist.append(Car())
-
 
 game_is_on = True
 scoreBoard = ScoreBoard()
 scoreBoard.print_level()
+
 while game_is_on:
     # time.sleep(car.move_speed)
-    time.sleep(0.2)
+    time.sleep(0.1)
     screen.update()
-    # car.move()
-    for car in carlist:
-        if car.distance(player) < 10:
+    car_manager.creat_cars()
+    car_manager.move_cars()
+
+    #Detect collision with car
+    for car in car_manager.all_cars:
+        if car.distance(player) < 20:
             game_is_on = False
             break
-        car.move()
 
-    if player.ycor() > 280:
+    #Detecct successful crossing
+    if player.is_at_finish_file():
         scoreBoard.level_up()
-        player.reset_pos()
-        print("reset")
+        player.goto_start()
+        car_manager.level_up()
 
-
-
-
+scoreBoard.game_over()
 
 screen.exitonclick()

@@ -1,0 +1,42 @@
+2025-04-15 14:35:26.%f [app] INFO:    Hello world
+2025-04-15 14:35:29.%f [app] INFO:    Hello world
+2025-04-15 14:36:01.%f [app] INFO:    Hello world
+2025-04-15 14:36:01.%f [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:36:01.%f [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:38:09.515 [app] INFO:    Hello world
+2025-04-15 14:38:09.515 [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:38:09.516 [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:38:48.419 [app] INFO    INFO:    Hello world
+2025-04-15 14:38:48.419 [app] DEBUG   DEBUG:   Debug message with value: 42
+2025-04-15 14:38:48.419 [app] DEBUG   DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:39:30.817 [app] INFO:    Hello world
+2025-04-15 14:39:30.817 [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:39:30.817 [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:40:58.176 [app] INFO:    Hello world
+2025-04-15 14:40:58.176 [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:40:58.176 [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:46:54.595 [app] INFO:    Hello world
+2025-04-15 14:46:54.595 [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:46:54.595 [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:47:12.094 [app] INFO:    Hello world
+2025-04-15 14:47:12.094 [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:47:12.095 [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65
+2025-04-15 14:50:17.033 [app] INFO:    Hello world
+2025-04-15 14:50:17.034 [app] DEBUG:   Debug message with value: 42
+2025-04-15 14:50:17.034 [app] DUMP:      Packet  [34]
+	48 65 6C 6C 6F 2C 20 68 65 72 65 20 69 73 20 61 20 62 79 74
+	65 20 64 75 6D 70 20 65 78 61 6D 70 6C 65

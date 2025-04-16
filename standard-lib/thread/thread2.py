@@ -3,12 +3,15 @@ import time
 import logging
 from enum import IntEnum
 
-# 상수 정의
+# 상태 코드
+RST_OK = 0
+RST_ABNORMAL = 1
+RST_STOPPED = 2
+
 THR_START_ID = 1
 THR_MAX_ID = 10000
-DEF_THR_CHECK_INTERVAL = 3.0  # 초 단위
+DEF_THR_CHECK_INTERVAL = 1.0  # 초 단위
 
-# 전역 Thread ID Pool
 thr_id_pool = []
 thr_id_lock = threading.Lock()
 

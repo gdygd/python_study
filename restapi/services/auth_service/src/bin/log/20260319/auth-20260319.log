@@ -1,0 +1,103 @@
+PRINT  :[auth]2026/03/19 11:21:47.733182 Application starting..
+INFO   :[auth]2026/03/19 11:21:48.064199 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 11:21:48.065790 cors origins=['*']
+PRINT  :[auth]2026/03/19 11:21:48.073780 Application started 1 server(s)
+INFO   :[auth]2026/03/19 11:21:48.074730 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 11:22:05.957722 read_sysdate.. SELECT now() AS dt FROM dual
+INFO   :[auth]2026/03/19 11:22:05.969524 testapi sysdate=2026-03-19 11:22:05
+PRINT  :[auth]2026/03/19 11:22:16.996586 signal received: 2
+PRINT  :[auth]2026/03/19 11:22:16.997061 Application shutdown start
+PRINT  :[auth]2026/03/19 11:22:16.997352 shutdown server: Server
+INFO   :[auth]2026/03/19 11:22:16.997615 server graceful shutdown requested (timeout=5s)
+PRINT  :[auth]2026/03/19 11:22:17.191043 signal received: 2
+INFO   :[auth]2026/03/19 11:22:17.191753 server shutdown complete
+PRINT  :[auth]2026/03/19 11:22:17.192219 Application shutdown complete
+PRINT  :[auth]2026/03/19 11:22:17.192675 Application stopped.
+PRINT  :[auth]2026/03/19 11:22:19.368472 Application starting..
+INFO   :[auth]2026/03/19 11:22:19.388512 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 11:22:19.389001 cors origins=['*']
+PRINT  :[auth]2026/03/19 11:22:19.392700 Application started 1 server(s)
+INFO   :[auth]2026/03/19 11:22:19.393231 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 11:22:21.822057 read_sysdate.. SELECT now() AS dt FROM dual
+INFO   :[auth]2026/03/19 11:22:21.823969 testapi sysdate=2026-03-19 11:22:21
+PRINT  :[auth]2026/03/19 11:22:28.824912 signal received: 2
+PRINT  :[auth]2026/03/19 11:22:28.825291 Application shutdown start
+PRINT  :[auth]2026/03/19 11:22:28.825426 shutdown server: Server
+INFO   :[auth]2026/03/19 11:22:28.825523 server graceful shutdown requested (timeout=5s)
+ERROR  :[auth]2026/03/19 11:22:33.826467 server shutdown timed out after 5s, forcing exit
+INFO   :[auth]2026/03/19 11:22:33.851654 server force exit complete
+PRINT  :[auth]2026/03/19 11:22:33.852062 Application shutdown complete
+PRINT  :[auth]2026/03/19 11:22:33.852546 signal received: 2
+PRINT  :[auth]2026/03/19 11:22:33.852815 Application stopped.
+PRINT  :[auth]2026/03/19 11:24:58.867983 Application starting..
+INFO   :[auth]2026/03/19 11:24:58.887620 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 11:24:58.888140 cors origins=['*']
+PRINT  :[auth]2026/03/19 11:24:58.891798 Application started 1 server(s)
+INFO   :[auth]2026/03/19 11:24:58.892340 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 11:25:01.038329 read_sysdate.. SELECT now() AS dt FROM dual
+INFO   :[auth]2026/03/19 11:25:01.039524 testapi sysdate=2026-03-19 11:25:01
+PRINT  :[auth]2026/03/19 11:25:01.945247 signal received: 2
+PRINT  :[auth]2026/03/19 11:25:01.945719 Application shutdown start
+PRINT  :[auth]2026/03/19 11:25:01.946002 shutdown server: Server
+INFO   :[auth]2026/03/19 11:25:01.946181 server graceful shutdown requested (timeout=5s)
+ERROR  :[auth]2026/03/19 11:25:06.947413 server shutdown timed out after 5s, forcing exit
+INFO   :[auth]2026/03/19 11:25:07.047534 server force exit complete
+PRINT  :[auth]2026/03/19 11:25:07.047912 Application shutdown complete
+PRINT  :[auth]2026/03/19 11:25:07.048345 signal received: 2
+PRINT  :[auth]2026/03/19 11:25:07.048651 Application stopped.
+PRINT  :[auth]2026/03/19 11:30:47.295471 Application starting..
+INFO   :[auth]2026/03/19 11:30:47.315259 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 11:30:47.315757 cors origins=['*']
+PRINT  :[auth]2026/03/19 11:30:47.319289 Application started 1 server(s)
+INFO   :[auth]2026/03/19 11:30:47.319825 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 11:30:48.326137 signal received: 2
+PRINT  :[auth]2026/03/19 11:30:48.326616 Application shutdown start
+PRINT  :[auth]2026/03/19 11:30:48.326848 shutdown server: Server
+INFO   :[auth]2026/03/19 11:30:48.327031 server graceful shutdown requested (timeout=5s)
+PRINT  :[auth]2026/03/19 11:30:48.443176 signal received: 2
+INFO   :[auth]2026/03/19 11:30:48.443623 server shutdown complete
+PRINT  :[auth]2026/03/19 11:30:48.443883 Application shutdown complete
+PRINT  :[auth]2026/03/19 11:30:48.444081 Application stopped.
+PRINT  :[auth]2026/03/19 14:47:09.959172 Application starting..
+INFO   :[auth]2026/03/19 14:47:09.982005 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 14:47:09.982666 cors origins=['*']
+PRINT  :[auth]2026/03/19 14:47:09.986374 Application started 1 server(s)
+INFO   :[auth]2026/03/19 14:47:09.986958 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 14:47:16.211203 signal received: 2
+PRINT  :[auth]2026/03/19 14:47:16.211697 Application shutdown start
+PRINT  :[auth]2026/03/19 14:47:16.212253 shutdown server: Server
+INFO   :[auth]2026/03/19 14:47:16.212724 server graceful shutdown requested (timeout=5s)
+PRINT  :[auth]2026/03/19 14:47:16.335878 signal received: 2
+INFO   :[auth]2026/03/19 14:47:16.336641 server shutdown complete
+PRINT  :[auth]2026/03/19 14:47:16.337177 Application shutdown complete
+PRINT  :[auth]2026/03/19 14:47:16.337651 Application stopped.
+PRINT  :[auth]2026/03/19 14:50:48.978347 Application starting..
+INFO   :[auth]2026/03/19 14:50:48.997816 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 14:50:48.998420 cors origins=['*']
+PRINT  :[auth]2026/03/19 14:50:49.002189 Application started 1 server(s)
+INFO   :[auth]2026/03/19 14:50:49.002723 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 14:51:52.252825 create_user...
+PRINT  :[auth]2026/03/19 14:51:52.592762 user : <myapp.db.model.User object at 0x7f36632921d0>
+PRINT  :[auth]2026/03/19 15:00:08.987995 signal received: 2
+PRINT  :[auth]2026/03/19 15:00:09.040441 Application shutdown start
+PRINT  :[auth]2026/03/19 15:00:09.041885 shutdown server: Server
+INFO   :[auth]2026/03/19 15:00:09.042531 server graceful shutdown requested (timeout=5s)
+PRINT  :[auth]2026/03/19 15:00:09.176990 signal received: 2
+INFO   :[auth]2026/03/19 15:00:09.182821 server shutdown complete
+PRINT  :[auth]2026/03/19 15:00:09.183300 Application shutdown complete
+PRINT  :[auth]2026/03/19 15:00:09.183770 Application stopped.
+PRINT  :[auth]2026/03/19 15:00:14.673595 Application starting..
+INFO   :[auth]2026/03/19 15:00:14.921093 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/19 15:00:14.922656 cors origins=['*']
+PRINT  :[auth]2026/03/19 15:00:14.931238 Application started 1 server(s)
+INFO   :[auth]2026/03/19 15:00:14.932239 FastAPI server start. addr=0.0.0.0:8899
+PRINT  :[auth]2026/03/19 15:00:21.110372 create_user...
+PRINT  :[auth]2026/03/19 15:00:21.254735 user : <myapp.db.model.User object at 0x7f14493a2d70>
+PRINT  :[auth]2026/03/19 18:08:57.651779 signal received: 2
+PRINT  :[auth]2026/03/19 18:08:58.190544 Application shutdown start
+PRINT  :[auth]2026/03/19 18:08:58.196150 shutdown server: Server
+INFO   :[auth]2026/03/19 18:08:58.199616 server graceful shutdown requested (timeout=5s)
+PRINT  :[auth]2026/03/19 18:08:59.009644 signal received: 2
+INFO   :[auth]2026/03/19 18:08:59.018274 server shutdown complete
+PRINT  :[auth]2026/03/19 18:08:59.018624 Application shutdown complete
+PRINT  :[auth]2026/03/19 18:08:59.018862 Application stopped.

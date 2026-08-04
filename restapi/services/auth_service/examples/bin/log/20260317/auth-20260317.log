@@ -1,0 +1,8 @@
+INFO   :[auth]2026/03/17 18:24:34.698362 db open host=10.1.0.119 db=docker
+INFO   :[auth]2026/03/17 18:24:34.745255 db closed
+INFO   :[auth]2026/03/17 18:25:14.384632 db open host=10.1.0.119 db=docker
+PRINT  :[auth]2026/03/17 18:25:14.384958 read_sysdate.. SELECT now() AS dt FROM dual
+INFO   :[auth]2026/03/17 18:25:14.390867 db closed
+INFO   :[auth]2026/03/17 18:25:24.422967 db open host=10.1.0.119 db=docker
+PRINT  :[auth]2026/03/17 18:25:24.423216 read_sysdate.. SELECT now() AS dt FROM dual
+INFO   :[auth]2026/03/17 18:25:24.428537 db closed

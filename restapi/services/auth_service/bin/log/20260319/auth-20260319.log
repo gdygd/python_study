@@ -1,0 +1,6 @@
+PRINT  :[auth]2026/03/19 11:21:32.527558 Application starting..
+ERROR  :[auth]2026/03/19 11:21:32.573434 Db Init err.. (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO   :[auth]2026/03/19 11:21:32.574892 cors origins=['*']
+PRINT  :[auth]2026/03/19 11:21:32.587079 Application started 1 server(s)
+INFO   :[auth]2026/03/19 11:21:32.588557 FastAPI server start. addr=0.0.0.0:8080

@@ -1,0 +1,280 @@
+# CLAUDE.md (한글 버전)
+
+이 파일은 이 Python 프로젝트에서 작업할 때 Claude Code가 따라야 할
+가이드를 제공합니다.
+
+------------------------------------------------------------------------
+
+# 프로젝트 개요 (Project Overview)
+
+이 프로젝트는 **Python 백엔드 서비스**입니다.
+
+주요 목표:
+
+-   클린 아키텍처 (Clean Architecture)
+-   유지보수 가능한 코드
+-   테스트 가능한 모듈 구조
+-   운영 환경에서 사용할 수 있는 로깅 및 에러 처리
+
+Python 버전: **3.10 이상**
+
+------------------------------------------------------------------------
+
+# 프로젝트 구조 (Project Structure)
+
+    project_root/
+    ├── bin
+    │   └── log
+    ├── CLAUDE.md
+    ├── example 
+    ├── poetry.lock
+    ├── pyproject.toml
+    ├── ref
+    │   └── db
+    │       ├── dbhandler.go
+    │       ├── mdb
+    │       │   ├── mdb_c.go
+    │       │   ├── mdbhandler.go
+    │       │   └── mdb_r.go
+    │       └── model.go
+    ├── src                             # 메인 애플리케이션 코드
+    │   ├── app
+    │   │   ├── api
+    │   │   └── gapi
+    │   ├── db                          # repository
+    │   ├── infra
+    │   ├── main.py                     # 애플리케이션 엔트리포인트
+    │   ├── proto
+    │   ├── service                     # 비즈니스 로직
+    │   └── utils
+    └── tests
+
+규칙:
+
+-   API 레이어는 **DB에 직접 접근하면 안 된다**
+-   구조는 **API → Service → Repository** 순서를 따른다
+-   **비즈니스 로직은 반드시 Service 레이어에 위치해야 한다**
+
+------------------------------------------------------------------------
+
+# 코딩 가이드라인 (Coding Guidelines)
+
+다음 규칙을 반드시 준수한다.
+
+## 일반 규칙
+
+-   Python **3.10 이상의 기능을 사용**
+-   **PEP8 스타일 가이드 준수**
+-   **모든 코드에 타입 힌트 사용**
+-   전역 상태(Global state) 사용 지양
+-   함수는 **작고 단순하게 작성**
+-   꼭 필요한 경우가 아니라면 '@dataclass'를 사용하지 마세요.
+-   인터페이스는 typing.Protocol사용
+
+예시:
+
+    def get_user(user_id: int) -> User:
+        ...
+
+------------------------------------------------------------------------
+
+# 네이밍 규칙 (Naming Convention)
+
+  유형     규칙
+  -------- ------------
+  변수     snake_case
+  함수     snake_case
+  클래스   PascalCase
+  상수     UPPER_CASE
+
+예시:
+
+    user_id
+    get_user()
+    UserService
+    MAX_RETRY
+
+------------------------------------------------------------------------
+
+# 에러 처리 (Error Handling)
+
+에러를 **절대 조용히 무시하지 않는다**.
+
+나쁜 예:
+
+    try:
+        do_something()
+    except:
+        pass
+
+좋은 예:
+
+    try:
+        do_something()
+    except Exception as e:
+        logger.error("operation failed", exc_info=e)
+        raise
+
+------------------------------------------------------------------------
+
+# 로깅 (Logging)
+
+**구조화된 로깅(structured logging)** 을 사용한다.
+
+    import logging
+
+    logger = logging.getLogger(__name__)
+
+    logger.info("user created", extra={"user_id": user_id})
+
+로그 레벨:
+
+  Level     설명
+  --------- ----------------------------------
+  DEBUG     개발 및 디버깅
+  INFO      정상 동작
+  WARNING   예상치 못했지만 복구 가능한 상황
+  ERROR     실패 또는 예외 상황
+
+------------------------------------------------------------------------
+
+# 데이터베이스 접근 (Database Access)
+
+데이터베이스 접근은 반드시 **Repository 레이어**를 통해 수행한다.
+
+패키지:
+    mysql, mariadb : PyMySQL
+    oracle : oracledb 
+    postgresql : psycopg2
+    커넥션풀 : SQLAlchemy
+
+Repository 예시:
+
+    class UserRepository:
+
+        def get_user(self, user_id: int) -> User:
+            ...
+
+Service 예시:
+
+    class UserService:
+
+        def __init__(self, repo: UserRepository):
+            self.repo = repo
+
+        def get_user(self, user_id: int) -> User:
+            return self.repo.get_user(user_id)
+
+------------------------------------------------------------------------
+
+# 테스트 (Testing)
+
+테스트 프레임워크는 **pytest**를 사용한다.
+
+    tests/
+     ├─ test_user_service.py
+     └─ test_repository.py
+
+예시:
+
+    def test_get_user():
+        user = service.get_user(1)
+        assert user.id == 1
+
+규칙:
+
+-   모든 **Service 레이어는 테스트를 반드시 작성**
+-   **private 함수는 테스트하지 않는다**
+-   외부 의존성은 **Mock 처리한다**
+-   
+
+테스트 Running:
+
+    poetry run pytest
+
+
+------------------------------------------------------------------------
+
+# 파이썬 코드 실행
+
+프레임워크는 **pytest**를 사용한다.
+
+예시:
+
+    poetry run python examples/example.py
+
+------------------------------------------------------------------------
+
+# 의존성 관리 (Dependency Management)
+
+패키지 관리는 **poetry**를 사용한다.
+
+설치 예시:
+
+    poetry add requests
+    poetry add --group dev pytest
+
+------------------------------------------------------------------------
+
+# 코드 포맷팅 (Formatting)
+
+사용 도구:
+
+-   black
+-   isort
+-   flake8
+
+명령어:
+
+    black .
+    isort .
+    flake8
+
+------------------------------------------------------------------------
+
+# 보안 가이드라인 (Security Guidelines)
+
+-   모든 입력값을 **검증(validate)** 한다
+-   **스택 트레이스를 외부에 노출하지 않는다**
+-   **비밀 정보(secret)를 코드에 하드코딩하지 않는다**
+
+환경 변수 사용:
+
+    DATABASE_URL
+    JWT_SECRET
+    REDIS_HOST
+
+------------------------------------------------------------------------
+
+# Pull Request 가이드라인
+
+모든 PR에는 다음이 포함되어야 한다.
+
+-   명확한 설명
+-   테스트 커버리지
+-   lint 에러 없음
+
+------------------------------------------------------------------------
+
+# 요약 (Summary)
+
+핵심 원칙:
+
+-   클린 아키텍처
+-   관심사의 분리 (Separation of Concerns)
+-   테스트 가능성
+-   유지보수성
+
+
+<claude-mem-context>
+# Recent Activity
+
+<!-- This section is auto-generated by claude-mem. Edit content outside the tags. -->
+
+### Mar 17, 2026
+
+| ID | Time | T | Title | Read |
+|----|------|---|-------|------|
+| #221 | 11:14 AM | 🔵 | Auth service project configuration uses Poetry with minimal dependencies | ~301 |
+| #217 | 11:13 AM | 🔵 | Project coding standards and architecture guidelines documented in CLAUDE.md | ~503 |
+</claude-mem-context>
